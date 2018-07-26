@@ -1,6 +1,7 @@
-let map, infowindow, service, posicion
+let map, infowindow, service, posicion;
 
 //busqueda por defecto para el mapa
+let range = rangeInput.value
 let defaultSearch = inputGroupSelect01.value
 
 // inicializar con la posicion incial
@@ -12,6 +13,12 @@ inputGroupSelect01.addEventListener("change", function () {
     defaultSearch = inputGroupSelect01.value
     initialize(posicion)
 });
+// si se cambia el rango
+rangeInput.addEventListener("change", function (ev) {
+    places.innerHTML = ''
+    range = ev.currentTarget.value
+    initialize(posicion)
+}, true);
 
 //funcion que imprime el mapa
 function initialize(pos) {
@@ -35,13 +42,15 @@ function initialize(pos) {
         title: "Mi ubicacion"
     });
     let request = {
-        location: pyrmont,
-        radius: '100',
-        query: defaultSearch
-    };
+         location: pyrmont,
+         radius: range,
+         type: ['restaurant'],
+         keyword: defaultSearch,
+    } 
+ 
     // Poner en el mapa solo los que coinciden con la busqueda
     service = new google.maps.places.PlacesService(map);
-    service.textSearch(request, function (results, status) {
+    service.nearbySearch(request, function (results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);

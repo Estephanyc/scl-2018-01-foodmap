@@ -38,25 +38,31 @@
     <!-- input -->
     <section class="container">
         <div class="row">
-            <div class="col-12 col-md-9 center mx-auto">
-                <h4 class="title">Comida cerca de ti</h4>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text options-label" for="inputGroupSelect01">Options</label>
+
+            <div class="col-11 col-md-9 center mx-auto">
+                <div class="row">
+                    <h4 class="title">Comida cerca de ti</h4>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text options-label" for="inputGroupSelect01">Options</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected value="restaurantes">Todos</option>
+                            <option value="restaurante chino">Chino</option>
+                            <option value="restaurante mexicano">Mexicano</option>
+                            <option value="restaurante oriental">Oriental</option>
+                            <option value="restaurante peruano">Peruano</option>
+                            <option value="sushi">Sushi</option>
+                            <option value="restaurantes vegetarianos">Vegetariano</option>
+                        </select>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option selected value="restaurantes">Todos</option>
-                        <option value="restaurante chino">Chino</option>
-                        <option value="restaurante mexicano">Mexicano</option>
-
-                        <option value="restaurante oriental">Oriental</option>
-
-                        <option value="restaurante peruano">Peruano</option>
-                        <option value="sushi">Sushi</option>
-                        <option value="restaurantes vegetarianos">Vegetariano</option>
-
-                    </select>
                 </div>
+                <div class="row">
+                    <h5>Distancia</h5>
+                    <span> (100m - 5km)</span>
+                    <input type="range" class="form-control-range" min="100" max="5000" value="200" step="1" id="rangeInput">
+                </div>
+
             </div>
         </div>
     </section>
