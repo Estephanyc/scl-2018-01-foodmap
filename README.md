@@ -4,4 +4,4 @@ Web que te permite ver los restaurantes mas cercanos a tu ubicación, filtrar po
 
 
 ## Enlace a la web
-https://estephanyc.github.io/scl-2018-01-foodmap/map.htmls
+https://estephanyc.github.io/scl-2018-01-foodmap/index.html
