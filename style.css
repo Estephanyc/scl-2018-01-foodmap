@@ -49,3 +49,9 @@ header, section{
     font-size: 100%;
     color: #1d1c1b;
 }
+.margin-top{
+    margin-top: 10px;
+}
+.left{
+    float: left;
+}

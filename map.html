@@ -1,13 +1,16 @@
 <html>
+
 <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeVYHPAsAcf5qnAJ_ziTYoT85COoHLB_8&libraries=places"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeVYHPAsAcf5qnAJ_ziTYoT85COoHLB_8&libraries=places"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+<title>FoodMap</title>
+<link rel="shortcut icon" href="img/restaurant.png">
 </head>
 
 <body class="body-map">
@@ -16,7 +19,7 @@
     <header class="container">
         <div class="row">
             <div class="col-12 col-md-9 center mx-auto">
-                
+
                 <h2 class="title">FoodMap</h2>
             </div>
         </div>
@@ -81,10 +84,10 @@
                         </p>
                     </div>
                     <div class="row container  mx-auto">
-                        <div id="photo"></div>
+                        <div id="place-map" style="width:100%; height:40%"></div>
                     </div>
-                    <div class="row ">
-                        <div class="col-6">
+                    <div class="row margin-top">
+                        <div class="col-6 center">
                             <p>
                                 <i class="icons fas fa-door-open"></i>
                                 <span id="openingH"></span>
@@ -94,7 +97,7 @@
                                 <span id="rating"></span>
                             </p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 center">
                             <p>
                                 <i class="icons fas fa-globe"></i>
                                 <span id="website"></span>
@@ -103,6 +106,11 @@
                                 <i class="icons fas fa-phone"></i>
                                 <span id="phone"></span>
                             </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="photos"></div>
                         </div>
                     </div>
                 </div>
@@ -121,4 +129,5 @@
         crossorigin="anonymous"></script>
     <script src="map.js"></script>
 </body>
+
 </html>
