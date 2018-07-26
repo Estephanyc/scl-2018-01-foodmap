@@ -1,0 +1,51 @@
+body{
+     font-family: 'Exo',
+     sans-serif;
+}
+.body-map{
+    background-color:#f7f2ec;
+}
+#map{
+  width:650px;
+  height:650px
+}
+
+#photo{
+    margin-bottom: 1rem
+}
+.places{
+    float: left;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.placesImg{
+    height: 150px;
+     width: 100%;
+     cursor: pointer;
+}
+.title {
+   
+    color:#e93b3d;
+}
+.center {
+    text-align: center;
+}
+header, section{
+    margin-top: 30px;
+}
+.icons{
+    color: #e93b3d
+}
+.title-index {
+    font-family: 'Exo', sans-serif;
+    color: #e93b3d;
+    font-size: 38px
+}
+.options-label{
+    background: #e93b3d;
+    color: #fff;
+}
+.figure-caption {
+    font-size: 100%;
+    color: #1d1c1b;
+}

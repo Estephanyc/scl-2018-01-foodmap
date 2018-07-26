@@ -1,0 +1,124 @@
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+</head>
+
+<body class="body-map">
+
+    <!-- titulo -->
+    <header class="container">
+        <div class="row">
+            <div class="col-12 col-md-9 center mx-auto">
+                
+                <h2 class="title">FoodMap</h2>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- mapa -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-9 mx-auto">
+                <div id="map" style="width:100%; height:40%"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- input -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-9 center mx-auto">
+                <h4 class="title">Comida cerca de ti</h4>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text options-label" for="inputGroupSelect01">Options</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected value="restaurantes">Todos</option>
+                        <option value="restaurante chino">Chino</option>
+                        <option value="restaurante peruano">Peruano</option>
+                        <option value="restaurante mexicano">Mexicano</option>
+                        <option value="restaurante oriental">Oriental</option>
+                        <option value="sushi">Sushi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- lugares -->
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-9 center mx-auto">
+                <div id="places"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title title " id="titleModal"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-auto">
+                    <div class="row container">
+                        <p>
+                            <i class="icons fas fa-map-marker-alt"></i>
+                            <span id="direcction"></span>
+                        </p>
+                    </div>
+                    <div class="row container  mx-auto">
+                        <div id="photo"></div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-6">
+                            <p>
+                                <i class="icons fas fa-door-open"></i>
+                                <span id="openingH"></span>
+                            </p>
+                            <p>
+                                <i class="icons far fa-star"></i>
+                                <span id="rating"></span>
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p>
+                                <i class="icons fas fa-globe"></i>
+                                <span id="website"></span>
+                            </p>
+                            <p>
+                                <i class="icons fas fa-phone"></i>
+                                <span id="phone"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="map.js"></script>
+</body>
+</html>
